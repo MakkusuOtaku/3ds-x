@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='description' content='Experiments on utilising the Nintendo 3DS.'>
+        <meta name='author' content='Makkusu Otaku'>
+        <link rel="icon" href="icon.png">
+        <title>3DS-X</title>
+        <style>
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: none;
+            }
+
+            #screen-info {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                font-family: monospace;
+                font-size: large;
+
+                background: #0009;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="colors.png">
+        <canvas></canvas>
+        <div id="screen-info">Hello</div>
+        <script type="text/javascript">
+            let screenInfo = document.getElementById("screen-info");
+            let screen = window.screen;
+
+            screenInfo.innerText = `${screen.width}x${screen.height}`;
+        </script>
+    </body>
+</html>
